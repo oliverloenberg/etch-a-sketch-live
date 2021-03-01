@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%vw;
+  height: auto; */
+  padding: 12px 12px;
+  background-color: rgb(197, 245, 232);
+  font-family: "Quicksand", sans-serif;
+  color: rgb(49, 49, 49);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  column-gap: 4px;
+  row-gap: 4px;
+  grid-auto-flow: dense;
+  justify-items: stretch;
+  width: 1200px;
+  height: auto;
+}
+
+.grid-element-style {
+  width: auto;
+  height: 10px;
+  background-color: brown;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.marked {
+  background-color: hsl(199, 43%, 37%);
+}
+
+.markedDarker {
+  background-color: hsl(199, 43%, 27%);
+}
+
+.reset-button {
+  padding: 10px 10px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  background-color: white;
+  box-shadow: 2px 2px 8px 2px rgb(119, 119, 119);
+  border-radius: 3px 3px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  color: rgb(49, 49, 49);
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+
+.reset-button:hover {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+section {
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
