@@ -13,7 +13,6 @@
   <body>
     <h1>Etch a sketch!</h1>
     <script>
-      //Testing can i upload changes to git again?
       //First we want to create a container where the 16x16 grids will be inserted into
       const body = document.querySelector("body");
       let container = document.createElement("section");
@@ -22,14 +21,14 @@
       //Apply start size of 16x16 grid to the container - this will change via the button prompt window when that is clicked
       container.classList.add("grid-container");
 
-      //We to initialize the grid with the default 16x16 size
+      //We want to initialize the grid with the default 16x16 size
       function initializeGrid() {
         for (let i = 1; i <= 256; i++) {
-          //We need to create the grid elements
+          //We need to create the grid element
           let gridElement = document.createElement("div");
-          //And append them
+          //And append it
           container.appendChild(gridElement);
-          //Add the class styling to the grid elements
+          //Add the class styling to the grid element
           gridElement.classList.add("grid-element-style");
         }
       }
@@ -50,11 +49,11 @@
         gridStyle.style.gridTemplateRows = `repeat(${userInput}, 1fr)`;
         //Then we want to create the new grid
         for (let i = 1; i <= userInput * userInput; i++) {
-          //We need to create the grid elements
+          //We need to create the grid element
           let gridElement = document.createElement("div");
-          //And append them
+          //And append it
           container.appendChild(gridElement);
-          //Add the class styling to the grid elements
+          //Add the class styling to the grid element
           gridElement.classList.add("grid-element-style");
         }
       }
@@ -105,7 +104,7 @@
         //Then a prompt comes up asking how many squares per side the new grid should be made with
         let gridSize = prompt(
           "How big do you want the grid? Max size can be 50x50",
-          "Write a number here"
+          "Write a number here like 10."
         );
         //Set a maximum input to 100
         if (gridSize < 51 && gridSize != 0 && gridSize != null) {
@@ -116,6 +115,5 @@
         }
       });
     </script>
-    <!--    <script src="scripts.js"></script> -->
   </body>
 </html>
